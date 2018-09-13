@@ -19,10 +19,21 @@ atom-pane:not(.active) {
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
 
+
 .tab-bar {
   background-color: @tab-bar-background-color;
   border-top: 1px solid @base-border-color;
   margin: 15px;
+
+  .placeholder {
+    top: 5px;
+    height: @tab-height - 6; // - 1 to avoid shifting editor
+    background-color: @primary-color;
+
+    &::after {
+      display: none;
+    }
+  }
 
   .title;
 
@@ -42,8 +53,6 @@ atom-pane:not(.active) {
     }
 
     .title {
-      // text-align: center;
-
       .icon {
         &::before {
           font-size: 13px;
@@ -82,14 +91,28 @@ atom-pane:not(.active) {
 
     // Close Icon (the X) -------------------
     .close-icon {
+      border-radius: @component-border-radius;
+      top: 8px;
+      right: 0.5rem;
+      font-size: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      text-align: center;
+      overflow: hidden;
       opacity: 0;
+      transition: opacity 300ms;
 
       &::before {
-        text-align: center;
+        font-size: 1.1rem;
+        vertical-align: -0.05rem;
+        width: auto;
+        height: auto;
       }
 
       &:hover {
         color: @text-color-selected;
+        background: @oc-gray-2;
       }
     }
 
@@ -100,9 +123,9 @@ atom-pane:not(.active) {
     // Dragging -------------------
     // Styles get applied while dragging a tab
     &.is-dragging {
-      background: darken(@tab-background-color, 10%);
+      background: @oc-gray-0;
       border-color: transparent;
-      opacity: 0.5;
+      filter: blur(1px);
 
       & .close-icon {
         visibility: hidden;
@@ -112,6 +135,7 @@ atom-pane:not(.active) {
     &:hover {
       .close-icon {
         opacity: 1;
+        transition: opacity 300ms;
       }
     }
   }
