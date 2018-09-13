@@ -5,6 +5,22 @@
 // The `progress` element is unstyled and defined by the OS.
 // See https://css-tricks.com/html5-progress-element/ in case you want to customize it.
 
+progress {
+  -webkit-appearance: none;
+  background-color: #ddd;
+  height: 0.5rem;
+  border-radius: @component-border-radius;
+
+  &::-webkit-progress-bar {
+    background-color: @oc-gray-3;
+    border-radius: @component-border-radius;
+  }
+
+  &::-webkit-progress-value {
+    background-color: @oc-gray-9;
+    border-radius: @component-border-radius;
+  }
+}
 
 // Spinner -------------------
 
