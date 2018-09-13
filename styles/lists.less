@@ -33,7 +33,7 @@
 .select-list {
   .character-match {
     font-weight: normal !important;
-    border-bottom: 1px solid @oc-blue-3;
+    border-bottom: 1px solid @primary-color;
     color: inherit;
   }
 
@@ -43,6 +43,14 @@
 
   .status {
     float: right;
+  }
+
+  .error-message {
+    margin-top: 10px;
+    border-radius: @component-border-radius;
+    padding: @component-padding;
+    background: @background-color-error;
+    color: @primary-color;
   }
 }
 
@@ -63,6 +71,11 @@ autocomplete-suggestion-list.select-list.popover-list {
 
   .suggestion-description-content {
     font-size: 0.9rem;
+  }
+
+  .suggestion-description-more-link {
+    color: @primary-color;
+    font-weight: bold;
   }
 
   ol.list-group {
