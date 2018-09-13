@@ -2,9 +2,9 @@
 // -------------------
 // Used to explore and open files in the current project.
 // Overrides: atom/tree-view
-.tree-view-resizer {
-  border-top: 1px solid @base-border-color;
-  border-right: 1px solid @base-border-color;
+
+.atom-dock-resize-handle-resizable {
+  border-right: 1px solid @background-color-default;
 }
 
 .tree-view {
@@ -15,7 +15,40 @@
     color: @text-color-selected;
 
     &::before {
-      background: darken(@base-background-color, 5%);
+      background: @background-color-default;
+      border-radius: @component-border-radius;
     }
   }
+}
+
+.tree-view .entry.directory.status-modified > .header,
+.tree-view .entry.file.status-modified {
+  color: @oc-gray-9;
+  font-weight: bold;
+}
+
+.tree-view .entry.directory.status-added > .header,
+.tree-view .entry.file.status-added {
+  color: @oc-gray-9;
+  text-decoration: underline dotted @oc-gray-7;
+  font-weight: 500;
+}
+
+.tree-view .entry.directory.status-renamed > .header,
+.tree-view .entry.file.status-renamed {
+  color: @oc-blue-6;
+}
+
+.tree-view .entry.directory.status-removed > .header,
+.tree-view .entry.file.status-removed {
+  color: @oc-red-6;
+}
+
+.tree-view .entry.directory.status-ignored > .header,
+.tree-view .entry.file.status-ignored {
+  color: @oc-gray-4;
+}
+
+.list-tree > li:not(.status-modified):not(.status-ignored):not(.status-removed):not(.status-renamed):not(.status-added) {
+  color: @oc-gray-6;
 }
