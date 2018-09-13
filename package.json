@@ -1,0 +1,20 @@
+{
+  "name": "xi-ui",
+  "theme": "ui",
+  "version": "0.0.1",
+  "description": "Monochrome theme UI inspired by Apex.",
+  "keywords": [
+    "xi",
+    "ui",
+    "apex",
+    "black",
+    "white",
+    "grayscale",
+    "monochrome"
+  ],
+  "repository": "https://github.com/pacocoursey/xi-ui",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
