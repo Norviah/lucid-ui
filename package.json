@@ -12,7 +12,7 @@
     "grayscale",
     "monochrome"
   ],
-  "repository": "https://github.com/pacocoursey/xi-ui",
+  "repository": "https://github.com/pacocoursey/Xi-UI.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
