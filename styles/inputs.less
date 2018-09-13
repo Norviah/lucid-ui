@@ -1,0 +1,33 @@
+
+// Various inputs and controls
+
+.input-checkbox,
+.input-radio,
+.input-toggle {
+  background-color: @oc-gray-3;
+
+  &:active {
+    background-color: @oc-gray-5;
+  }
+
+  &:checked {
+    background-color: @primary-color;
+
+    &:active {
+      background-color: @oc-gray-5;
+    }
+  }
+
+  &::before,
+  &::after {
+    background-color: @oc-gray-0;
+  }
+}
+
+.input-range {
+  background-color: @oc-gray-3;
+
+  &::-webkit-slider-thumb {
+    background-color: @primary-color;
+  }
+}
