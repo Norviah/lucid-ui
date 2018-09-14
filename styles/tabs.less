@@ -79,14 +79,15 @@ atom-pane:not(.active) {
     }
 
     &.modified:not(:hover) .close-icon {
-      top: 50%;
-      right: @component-padding + 4px; // 4px -> half of icon size
-      margin-top: -3px;
-      border-color: @text-color-info;
+      display: none;
     }
 
     &.modified:hover .close-icon {
-      color: currentColor;
+      color: @text-color-error;
+
+      &:hover {
+        color: @text-color-error;
+      }
     }
 
     // Close Icon (the X) -------------------
@@ -102,6 +103,7 @@ atom-pane:not(.active) {
       overflow: hidden;
       opacity: 0;
       transition: opacity 300ms;
+      background: @base-background-color;
 
       &::before {
         font-size: 1.1rem;

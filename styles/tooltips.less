@@ -11,9 +11,20 @@
     color: #fff;
   }
 
-  .tooltip-arrow {
-    border-top-color: @primary-color !important;
-    border-bottom-color: @primary-color !important;
+  &.top .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+
+  &.right .tooltip-arrow {
+    border-right-color: @tooltip-arrow-color;
+  }
+
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+
+  &.left .tooltip-arrow {
+    border-left-color: @tooltip-arrow-color;
   }
 
   .keystroke {
