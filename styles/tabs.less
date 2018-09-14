@@ -19,7 +19,6 @@ atom-pane:not(.active) {
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
 
-
 .tab-bar {
   background-color: @tab-bar-background-color;
   border-top: 1px solid @base-border-color;
@@ -35,9 +34,8 @@ atom-pane:not(.active) {
     }
   }
 
-  .title;
-
   .tab {
+    position: relative;
     color: @text-color-subtle;
     height: @tab-height;
     line-height: @tab-height;
@@ -47,6 +45,10 @@ atom-pane:not(.active) {
     margin-top: -1px;
     max-width: 130px;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
     &:last-child {
       border-right: none;
@@ -61,9 +63,8 @@ atom-pane:not(.active) {
     }
 
     &.active {
-      flex: 1;
       color: @text-color-selected;
-      border-top: 1px solid @tab-border-color-active;
+      border-top: 1px solid @tab-border-color-active !important;
       font-weight: bold;
 
       .title {
@@ -92,29 +93,24 @@ atom-pane:not(.active) {
 
     // Close Icon (the X) -------------------
     .close-icon {
+      height: 14px;
+      width: 14px;
+      top: 10px;
       border-radius: @component-border-radius;
-      top: 8px;
-      right: 0.5rem;
-      font-size: 1rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      line-height: 1.5rem;
-      text-align: center;
-      overflow: hidden;
+      background-color: @base-background-color;
       opacity: 0;
       transition: opacity 300ms;
-      background: @base-background-color;
 
       &::before {
-        font-size: 1.1rem;
-        vertical-align: -0.05rem;
-        width: auto;
-        height: auto;
+        position: absolute;
+        left: 3px;
+        top: 1px;
       }
 
       &:hover {
         color: @text-color-selected;
         background: @oc-gray-2;
+        cursor: pointer;
       }
     }
 
