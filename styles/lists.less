@@ -49,7 +49,7 @@
     margin-top: 10px;
     border-radius: @component-border-radius;
     padding: @component-padding;
-    background: @background-color-error;
+    background-color: @background-color-error;
     color: @primary-color;
   }
 }
@@ -65,7 +65,7 @@ autocomplete-suggestion-list.select-list.popover-list {
   .medium-shadow;
 
   .suggestion-description {
-    background: transparent;
+    background-color: transparent;
     font-size: 0.9rem;
   }
 
@@ -85,9 +85,10 @@ autocomplete-suggestion-list.select-list.popover-list {
   }
 
   .selected {
-    background: @autocomplete-background-color;
+    background-color: @autocomplete-background-color;
 
     .icon {
+      background-color: @autocomplete-background-color;
       color: @primary-color;
     }
   }
@@ -103,7 +104,7 @@ autocomplete-suggestion-list.select-list.popover-list {
 
 autocomplete-suggestion-list {
   .suggestion-list-scroller {
-    background: @base-background-color;
+    background-color: @base-background-color;
   }
 
   .word-container {
@@ -112,7 +113,7 @@ autocomplete-suggestion-list {
 
   .icon-container {
     .icon {
-      background: rgba(255, 255, 255, 0.5) !important;
+      background-color: @base-background-color;
       color: @autocomplete-icon-color;
     }
   }
