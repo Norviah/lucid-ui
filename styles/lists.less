@@ -85,10 +85,10 @@ autocomplete-suggestion-list.select-list.popover-list {
   }
 
   .selected {
-    background: @oc-gray-0;
+    background: @autocomplete-background-color;
 
     .icon {
-      color: @oc-gray-9;
+      color: @primary-color;
     }
   }
 }
@@ -103,22 +103,17 @@ autocomplete-suggestion-list.select-list.popover-list {
 
 autocomplete-suggestion-list {
   .suggestion-list-scroller {
-    background: white;
-  }
-
-  .left-label {
-    color: @oc-gray-6;
+    background: @base-background-color;
   }
 
   .word-container {
-    color: @oc-gray-5;
+    color: @text-color-dim;
   }
 
   .icon-container {
-    // display: none !important;
     .icon {
       background: rgba(255, 255, 255, 0.5) !important;
-      color: @oc-gray-4;
+      color: @autocomplete-icon-color;
     }
   }
 }

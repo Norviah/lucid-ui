@@ -4,28 +4,28 @@
 .input-checkbox,
 .input-radio,
 .input-toggle {
-  background-color: @oc-gray-3;
+  background-color: @input-background-color;
 
   &:active {
-    background-color: @oc-gray-5;
+    background-color: @input-background-color-active;
   }
 
   &:checked {
     background-color: @primary-color;
 
     &:active {
-      background-color: @oc-gray-5;
+      background-color: @input-background-color-active;
     }
   }
 
   &::before,
   &::after {
-    background-color: @oc-gray-0;
+    background-color: @input-background-color-none;
   }
 }
 
 .input-range {
-  background-color: @oc-gray-3;
+  background-color: @input-background-color;
 
   &::-webkit-slider-thumb {
     background-color: @primary-color;

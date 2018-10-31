@@ -29,32 +29,32 @@ atom-pane-resize-handle.vertical {
 
 .tree-view .entry.directory.status-modified > .header,
 .tree-view .entry.file.status-modified {
-  color: @oc-gray-9;
+  color: @text-color;
   font-weight: bold;
 }
 
 .tree-view .entry.directory.status-added > .header,
 .tree-view .entry.file.status-added {
-  color: @oc-gray-9;
-  text-decoration: underline dotted @oc-gray-7;
+  color: @text-color;
+  text-decoration: underline dotted @underline-color;
   font-weight: 500;
 }
 
 .tree-view .entry.directory.status-renamed > .header,
 .tree-view .entry.file.status-renamed {
-  color: @oc-blue-6;
+  color: @text-color-info;
 }
 
 .tree-view .entry.directory.status-removed > .header,
 .tree-view .entry.file.status-removed {
-  color: @oc-red-6;
+  color: @text-color-error;
 }
 
 .tree-view .entry.directory.status-ignored > .header,
 .tree-view .entry.file.status-ignored {
-  color: @oc-gray-4;
+  color: @text-color-ignored;
 }
 
 .list-tree > li:not(.status-modified):not(.status-ignored):not(.status-removed):not(.status-renamed):not(.status-added) {
-  color: @oc-gray-6;
+  color: @text-color-subtle;
 }
