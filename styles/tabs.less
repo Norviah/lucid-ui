@@ -1,7 +1,7 @@
-
 @import "traits.less";
 
-// Pane blur.
+// Pane blur
+
 atom-pane:not(.active) {
   .tab-bar .tab.active {
     border-top: 1px solid transparent;
@@ -10,14 +10,12 @@ atom-pane:not(.active) {
 }
 
 // Correct padding applied by no-title-bar
+
 .platform-darwin atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
   padding-left: 0 !important;
 }
 
 // Tabs
-// -------------------
-// Displays selectable tabs above the editor.
-// Overrides: atom/tabs
 
 .tab-bar {
   background-color: @tab-bar-background-color;
@@ -72,7 +70,8 @@ atom-pane:not(.active) {
       }
     }
 
-    // Modified Icon (the blue circle) -------------------
+    // Modified Icon (the blue circle)
+
     &.modified {
       .title {
         font-weight: 800;
@@ -92,7 +91,8 @@ atom-pane:not(.active) {
       }
     }
 
-    // Close Icon (the X) -------------------
+    // Close Icon (the X)
+
     .close-icon {
       height: 14px;
       width: 14px;
@@ -119,8 +119,9 @@ atom-pane:not(.active) {
       color: @text-color;
     }
 
-    // Dragging -------------------
+    // Dragging
     // Styles get applied while dragging a tab
+
     &.is-dragging {
       background-color: @background-color-none;
       border-color: transparent;
