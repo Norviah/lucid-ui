@@ -1,32 +1,25 @@
-// Lists used in different places, like the Tree View, Commmand Palette etc.
-
-// List Group
-
 .list-group {
   li {
-    padding-left: @component-padding/2;
+    padding-left: @component-padding / 2;
     border-bottom: 1px dotted @base-border-color;
     color: @text-color-dim;
     .transition;
 
-    // We want to highlight the background of the list items because we dont know their size.
     &.selected {
       color: @text-color-selected;
       z-index: 15;
-      &::before { display: none; }
+      &::before {
+        display: none;
+      }
     }
   }
 }
-
-// List Tree
 
 .list-tree {
   .selected {
     color: @text-color-selected;
   }
 }
-
-// Select List
 
 .select-list {
   .character-match {
@@ -49,71 +42,5 @@
     padding: @component-padding;
     background-color: @background-color-error;
     color: @primary-color;
-  }
-}
-
-// Popover List
-// Used as a popover for something like autocomplete
-
-autocomplete-suggestion-list.select-list.popover-list {
-  @popover-list-padding: @component-padding/2;
-
-  padding: @popover-list-padding;
-  border-radius: @component-border-radius;
-  background-color: @overlay-background-color;
-  .medium-shadow;
-
-  .suggestion-description {
-    background-color: transparent;
-    font-size: 0.9rem;
-  }
-
-  .suggestion-description-content {
-    font-size: 0.9rem;
-  }
-
-  .suggestion-description-more-link {
-    color: @primary-color;
-    font-weight: bold;
-  }
-
-  ol.list-group {
-    li {
-      line-height: 2em;
-    }
-  }
-
-  .selected {
-    background-color: @autocomplete-background-color;
-
-    .icon {
-      background-color: @autocomplete-background-color;
-      color: @primary-color;
-    }
-  }
-}
-
-.select-list .selected .secondary-line {
-  color: @text-color-subtle;
-}
-
-.list-group li:not(.list-nested-item) {
-  line-height: 1.8;
-}
-
-autocomplete-suggestion-list {
-  .suggestion-list-scroller {
-    background-color: @base-background-color;
-  }
-
-  .word-container {
-    color: @text-color-dim;
-  }
-
-  .icon-container {
-    .icon {
-      background-color: @base-background-color;
-      color: @autocomplete-icon-color;
-    }
   }
 }

@@ -1,7 +1,4 @@
-// Base used for global styles or to override certain Atom core styles
-
 body {
-  font-size: @font-size;
   color: @text-color;
   background-color: @app-background-color;
 }
@@ -19,11 +16,13 @@ atom-pane-container atom-pane .item-views > * {
   bottom: 5px;
 }
 
-// Icons
-
 .icon {
   &::before {
     position: relative;
     top: 1px;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

@@ -28,13 +28,20 @@ atom-pane-resize-handle.vertical {
 .tree-view .entry.file.status-modified {
   color: @text-color;
   font-weight: bold;
+
+  & .name:after > {
+    content: " +";
+  }
 }
 
 .tree-view .entry.directory.status-added > .header,
 .tree-view .entry.file.status-added {
   color: @text-color;
-  text-decoration: underline dotted @underline-color;
-  font-weight: 500;
+  font-weight: bold;
+
+  & .name:after > {
+    content: " +";
+  }
 }
 
 .tree-view .entry.directory.status-renamed > .header,
@@ -45,6 +52,10 @@ atom-pane-resize-handle.vertical {
 .tree-view .entry.directory.status-removed > .header,
 .tree-view .entry.file.status-removed {
   color: @text-color-error;
+
+  & .name:after > {
+    content: " -";
+  }
 }
 
 .tree-view .entry.directory.status-ignored > .header,
@@ -52,6 +63,23 @@ atom-pane-resize-handle.vertical {
   color: @text-color-ignored;
 }
 
-.list-tree > li:not(.status-modified):not(.status-ignored):not(.status-removed):not(.status-renamed):not(.status-added) {
+.list-tree
+  > li:not(.status-modified):not(.status-ignored):not(.status-removed):not(.status-renamed):not(.status-added) {
   color: @text-color-subtle;
+}
+
+.tree-view .entry {
+  cursor: pointer;
+
+  font-family: @tree-view-font;
+  font-size: @tree-view-font-size;
+}
+
+[is="tree-view-file"],
+[is="tree-view-directory"] {
+  padding-top: 20px;
+}
+
+.file.entry {
+  margin-left: 0px !important;
 }

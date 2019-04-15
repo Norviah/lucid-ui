@@ -1,5 +1,3 @@
-// Panels
-
 .panel-heading {
   border-bottom: 1px solid @panel-heading-border-color;
   background-color: @panel-heading-background-color;
@@ -14,8 +12,6 @@
   }
 }
 
-// Modal used on top of the editor, like the Command Palette.
-
 atom-panel.modal {
   position: absolute;
   border: 1px solid @overlay-border-color;
@@ -29,12 +25,12 @@ atom-panel.modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: @base-background-color;
+  background-color: white;
 }
 
 atom-panel.modal li {
   margin: 5px 0;
-  background-color: @background-color-none;
+  background-color: white;
   border-bottom: none;
   border-radius: 3px;
 }
@@ -45,8 +41,8 @@ atom-panel.modal .list-group .character-match {
 }
 
 atom-panel.modal li.selected {
-  color: @modal-text-color;
-  background-color: @modal-background-color;
+  color: @panel-color;
+  background-color: @panel-background-color;
 }
 
 atom-panel.modal li:not(.list-nested-item) {

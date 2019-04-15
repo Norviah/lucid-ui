@@ -1,7 +1,5 @@
 @import "traits.less";
 
-// Pane blur
-
 atom-pane:not(.active) {
   .tab-bar .tab.active {
     border-top: 1px solid transparent;
@@ -9,13 +7,13 @@ atom-pane:not(.active) {
   }
 }
 
-// Correct padding applied by no-title-bar
-
-.platform-darwin atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
+.platform-darwin
+  atom-workspace
+  atom-panel-container.left:empty
+  + atom-workspace-axis.vertical
+  .tab-bar {
   padding-left: 0 !important;
 }
-
-// Tabs
 
 .tab-bar {
   background-color: @tab-bar-background-color;
@@ -33,6 +31,7 @@ atom-pane:not(.active) {
   }
 
   .tab {
+    cursor: pointer;
     position: relative;
     color: @text-color-subtle;
     height: @tab-height;
@@ -53,6 +52,8 @@ atom-pane:not(.active) {
     }
 
     .title {
+      font-weight: bold;
+      font-size: 7.9px;
       .icon {
         &::before {
           font-size: 13px;
@@ -60,22 +61,16 @@ atom-pane:not(.active) {
       }
     }
 
+    &.modified .title:after {
+      content: " +" !important;
+    }
+
     &.active {
       color: @text-color-selected;
       border-top: 1px solid @tab-border-color-active !important;
-      font-weight: bold;
 
       .title {
         padding: 0;
-      }
-    }
-
-    // Modified Icon (the blue circle)
-
-    &.modified {
-      .title {
-        font-weight: 800;
-        color: @base-action-color;
       }
     }
 
@@ -90,8 +85,6 @@ atom-pane:not(.active) {
         color: @text-color-error;
       }
     }
-
-    // Close Icon (the X)
 
     .close-icon {
       height: 14px;
@@ -119,9 +112,6 @@ atom-pane:not(.active) {
       color: @text-color;
     }
 
-    // Dragging
-    // Styles get applied while dragging a tab
-
     &.is-dragging {
       background-color: @background-color-none;
       border-color: transparent;
@@ -138,5 +128,13 @@ atom-pane:not(.active) {
         transition: opacity 300ms;
       }
     }
+  }
+}
+
+.title.temp {
+  font-style: normal;
+
+  &:after {
+    content: " ?";
   }
 }
